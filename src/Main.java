@@ -49,6 +49,7 @@ public class Main {
         //////
         System.out.println("Задача 3");
         int deliveryDistance = 68;
+        delivery(deliveryDistance);
         var days = delivery(deliveryDistance);
         System.out.println("Потребуется дней: " + days); //Тогда совершенно всё ломается(
     }
