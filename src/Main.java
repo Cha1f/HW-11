@@ -33,8 +33,6 @@ public class Main {
         }
         if (deliveryDistance >= 100) {
             System.out.println("Доставки нет");
-        } else {
-            System.out.println("Потребуется дней: " + deliveryDays);
         }
         return deliveryDistance;
     }
@@ -52,5 +50,7 @@ public class Main {
         System.out.println("Задача 3");
         int deliveryDistance = 68;
         delivery(deliveryDistance);
+        var days = delivery(deliveryDistance);
+        System.out.println("Потребуется дней: " + days); //Тогда совершенно всё ломается(
     }
 }
