@@ -23,7 +23,7 @@ public class Main {
         }
     }
 
-    public static void delivery(int deliveryDistance){
+    public static int delivery(int deliveryDistance){
         int deliveryDays = 1;
         if (deliveryDistance > 20) {
             deliveryDays++;
@@ -36,6 +36,7 @@ public class Main {
         } else {
             System.out.println("Потребуется дней: " + deliveryDays);
         }
+        return deliveryDistance;
     }
 
     public static void main(String[] args) {
