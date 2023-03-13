@@ -23,34 +23,25 @@ public class Main {
         }
     }
 
-    public static int delivery(int deliveryDistance){
-        int deliveryDays = 1;
-        if (deliveryDistance > 20) {
-            deliveryDays++;
+    public static String delivery(int deliveryDistance){
+        if (deliveryDistance <= 20) {
+            return "1 день доставки";
+        } else if (deliveryDistance <= 60) {
+            return "2 дня доставки";
+        } else if (deliveryDistance <= 100) {
+            return "3 дня доставки";
         }
-        if (deliveryDistance > 60) {
-            deliveryDays++;
-        }
-        if (deliveryDistance >= 100) {
-            System.out.println("Доставки нет");
-        }
-        return deliveryDistance;
+        return "Доставки нет";
     }
-
     public static void main(String[] args) {
         System.out.println("Задача 1");
         int year = 2024;
         leapYear(year);
-        //////
         System.out.println("Задача 2");
         int clientOperationSystem = 0;
         int clientDeviceYear = 2013;
         getClientOS(clientOperationSystem, clientDeviceYear);
-        //////
         System.out.println("Задача 3");
-        int deliveryDistance = 68;
-        delivery(deliveryDistance);
-        var days = delivery(deliveryDistance);
-        System.out.println("Потребуется дней: " + days); //Тогда совершенно всё ломается(
+        System.out.println(delivery(28)); //Тогда совершенно всё ломается(
     }
 }
